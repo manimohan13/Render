@@ -1,0 +1,53 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 10-03-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Lead Details">
+        <div class="slds-p-around_medium">
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input type="text" label="Lead Name" data-id="leadName"></lightning-input> 
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input type="text" label="Lead Source" data-id="leadSource"></lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input type="text" label="Annual Revenue" data-id="annualRevenue"></lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input type="Email" label="Email" data-id="email"></lightning-input>
+            </div>
+        </div>
+
+        <div class="slds-m-top_large slds-m-left_large">
+            <button class="slds-button slds-button_brand" onclick={handleChangeAdd}>Add</button>
+            <button class="slds-button slds-button_brand" onclick={handleChangeClear}>Clear</button>
+            <button class="slds-button slds-button_brand" onclick={handleChangeDisplay}>Display</button>
+        </div>
+
+        <!-- Error Message -->
+        <template lwc:if={errorMessage}>
+            <p class="slds-text-color_error">{errorMessage}</p>
+        </template>
+
+        <!-- Display Leads -->
+        <template lwc:if={showLeads}>
+            <template for:each={leads} for:item="leadObj" for:index="index">
+                <div key={leadObj.index} class="slds-box slds-m-top_medium">
+                    <strong>Lead Name:</strong> {leadObj.leadName} <br> 
+                    <strong>Lead Source:</strong> {leadObj.leadSource} <br>
+                    <strong>Annual Revenue:</strong> {leadObj.annualRevenue} <br>
+                    <strong>Email:</strong> {leadObj.email} 
+                </div>
+            </template>
+        </template>
+
+        <!-- No Leads Message -->
+        <template lwc:if={noLeadsMessage}>
+            <p>No leads added yet</p>
+        </template>
+    </lightning-card>
+</template>

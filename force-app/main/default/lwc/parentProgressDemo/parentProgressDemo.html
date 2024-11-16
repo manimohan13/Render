@@ -1,0 +1,22 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 10-03-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Parent Progress Bar Bemo">
+        <div class="slds-var-m-around_medium">
+            <div class="slds-grid">
+
+            <lightning-button class="slds-col" label="Start" variant="Success" onclick={handlStartClick}></lightning-button>
+            <lightning-button class="slds-col" label="Stop" variant="destructive" onclick={handlStopClick}></lightning-button>
+            <lightning-button class="slds-col" label="Reset" variant="brand" onclick={handlResetClick}></lightning-button>
+        </div>
+        <!--refer the Child Component-->
+        <c-child-progess-demo lwc:ref="child"></c-child-progess-demo>
+        </div>
+    </lightning-card>
+    
+</template>

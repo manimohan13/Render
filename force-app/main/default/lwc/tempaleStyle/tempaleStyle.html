@@ -1,0 +1,39 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 10-08-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Text Style">
+        <div class="slds-var-p-around_medium">
+            <div>
+                <!-- Assign a data-id to the paragraph -->
+                <p data-id="displayText">{ displayText }</p>
+            </div>
+            <!-- Remove lwc:ref and use data-id if needed -->
+            <lightning-input
+                type="text"
+                label="Enter Text"
+                onchange={handleChange}
+                class="slds-var-p-around_medium">
+            </lightning-input>
+            <lightning-button
+                label="Template 1"
+                onclick={handleTemp1Click}
+                class="slds-var-p-around_medium">
+            </lightning-button>
+            <lightning-button
+                label="Template 2"
+                onclick={handleTemp2Click}
+                class="slds-var-p-around_medium">
+            </lightning-button>
+            <lightning-button
+                label="Template 3"
+                onclick={handleTemp3Click}
+                class="slds-var-p-around_medium">
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>

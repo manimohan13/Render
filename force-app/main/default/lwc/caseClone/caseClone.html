@@ -1,0 +1,21 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 10-14-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Clone Case" icon-name="standard:case">
+        <div class="slds-m-around_medium">
+            <lightning-button label="Clone Case" onclick={handleClone} class="slds-m-bottom_small"></lightning-button>
+            <template if:true={clonedCaseId}>
+                <lightning-toast variant="success" message="Case cloned successfully!"></lightning-toast>
+                <p>Cloned Case ID: {clonedCaseId}</p>
+            </template>
+            <template if:true={error}>
+                <p class="error">{error}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

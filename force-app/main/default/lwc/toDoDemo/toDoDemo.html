@@ -1,0 +1,53 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 09-30-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="To-Do-List">
+      <div class="slds-p-around_medium">
+        <template lwc:if={isToDoListAvl}>
+          <!--Template Looping-->
+          <template for:each={toDoList} for:item="item">
+            <div key={item.taskId} class="slds-grid">
+              <div class="slds-p-around_medium slds-col whenTask">
+                {item.taskName}
+              </div>
+              <div class="slds-p-around_medium slds-col whenTask">
+                <lightning-button-icon
+                  name={item.taskId}
+                  icon-name="utility:delete"
+                  variant="container"
+                  onclick={handleRemoveTask}>
+                </lightning-button-icon>
+              </div>
+            </div>
+          </template>
+        </template>
+        <!--Else-->
+        <template lwc:else>
+          <div class="noTask">
+            <b>You Have No TODO List for Today</b>
+          </div>
+        </template>
+        
+        <div>
+          <lightning-input 
+            label="Enter New Task" 
+            value={newTask} 
+            onchange={handleTaskChange}>
+          </lightning-input>
+        </div>
+      </div>
+      <div class="slds-p-around_medium">
+        <lightning-button 
+          label="Add" 
+          variant="brand" 
+          onclick={handleAddClick}>
+        </lightning-button>
+      </div>
+    </lightning-card>
+  </template>
+  

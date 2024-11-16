@@ -1,0 +1,19 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 10-08-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Create Contact">
+        <div class="slds-var-m-around_medium slds-box" style="background-color:burlywood">
+            <lightning-input type="text" label="First Name" name="firstName" onchange={handleChange}></lightning-input>
+            <lightning-input type="text" label="Last Name" name="lastName" onchange={handleChange}></lightning-input>
+            <lightning-input type="date" label="Birth Date" name="birthDate" onchange={handleChange}></lightning-input>
+            <lightning-input type="email" label="Email" name="email" onchange={handleChange}></lightning-input>
+            <lightning-input class ="slds-m-bottom_medium"  type="text" label="Department" name="department" onchange={handleChange}></lightning-input>
+            <lightning-button class="slds-m-around_medium" label="Create Contact" variant="brand" onclick={handleCreateClick}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

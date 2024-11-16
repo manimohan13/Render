@@ -1,0 +1,37 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 09-29-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <Lightning-card title="Template Looping with Object Array">
+        <div class="slds-p-around_medium">
+        
+           
+            <!--template Looping Concept withobject array--> 
+            <!--for:index-->
+            <!--1.for:each  2.for:item 3.for:index 4.key-->
+            <template for:each={students} for:item="studentObj" for:index="index">
+                <div key={studentObj.index}>
+                    <div class="slds-box">
+                        Index:{index}<br>
+                        Name:{studentObj.Name}<br>
+                        Average:{studentObj.Average}
+                </div>
+                </div>   
+            </template>
+            <!--
+           <template for:each={students} for:item="studentObj">
+        <div key={studentObj.RollNo}>
+            <div class="slds-box">
+            {studentObj.Name}<br>
+            {studentObj.Average}
+        </div>
+        </div>   
+    </template>-->
+
+</div>
+    </Lightning-card>
+</template>

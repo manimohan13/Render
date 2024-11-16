@@ -1,0 +1,23 @@
+:host{
+    --slds-c-button-brand-color-background:purple; 
+    --slds-c-button-brand-color-background-hoverover:hotpink;
+    --slds-c-button-brand-text-color:yellow;
+    --slds-c-badge-color-background:orange;
+    --slds-c-card-color-background:pink;
+}
+/*
+.my-style{
+    --slds-c-button-brand-color-background:purple; 
+    --slds-c-button-brand-color-background-hoverover:hotpink;
+    --slds-c-button-brand-text-color:yellow;
+}
+.my-badge_style{
+    --slds-c-badge-color-background:orange;
+}
+.my-card{
+    --slds-c-card-color-background:pink;
+}
+.my-text{
+    color:blue;
+}
+    */

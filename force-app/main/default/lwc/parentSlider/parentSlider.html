@@ -1,0 +1,17 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 10-03-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Slider Demo">
+        <div class="slds-m-around_medium">
+            <lightning-slider label="Volume" max="100" min="0" type="horizontal" value={currentSliderValue} onchange={handleSliderChange}></lightning-slider>
+            <!--refer the Child Component-->
+            <c-child-slider current-child-slider-val={currentSliderValue}></c-child-slider> 
+        </div>
+    </lightning-card>
+    
+</template>

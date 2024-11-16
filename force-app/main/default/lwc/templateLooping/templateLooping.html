@@ -1,0 +1,31 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 09-29-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+   <!--templating looping-->
+<!--1. for:each, 2.for:item, 3.for:Item 4.key -->
+<!--UniqueId(courseId)here we are Binding.in backend LWC server Will be used this Id to track the Changes-->
+<lightning-card title="Template Looping Demo">
+<div class="slds-p-around_medium">
+    <!--Conditional rendering-->
+    <template lwc:if={isArray}>
+<template for:each={course} for:item="itemCourse" for:index="index">
+    <div key={itemCourse.index}> 
+        index:{index}<br>
+        courseName:{itemCourse}
+</div>
+</template>
+</template>
+<template lwc:else>
+    <b>Empty</b>
+</template>
+<!--updating the array dynamically-->
+<lightning-input type="text" label="Enter Course name" onchange={handleCourseChange}></lightning-input>
+<lightning-button label="Add" onclick={handleCourseClick}></lightning-button>
+</div>
+</lightning-card>
+</template>

@@ -1,0 +1,33 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 10-03-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+   <Lightning-card title="Child Component">
+
+    <div class="slds-m-around_medium">
+       <!--<p>Hi!!! from Child Component</p>-->
+       <!--1. String Data mesageDetails-string-->
+     <!-- Message from Parent : {messageDetails} -->
+    <!--2. Array message Deails - Array-->
+    <!--<template for:each={messageDetails} for:item="course">
+      <div key={course.Id}>
+        {course}
+      </div>
+    </template>-->
+    <!--3. Object messageDetails - Object-->
+   <!-- {messageDetails.brandName}
+    {messageDetails.yearFounded}-->
+    <!--4.Object Array-->
+<template for:each={messageDetails} for:item="car">
+  <div key={car.Id}>
+    {car.brandName}
+    {car.yearFounded}
+  </div>
+</template>
+    </div>
+   </Lightning-card> 
+</template>

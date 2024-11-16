@@ -1,0 +1,27 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 10-06-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Record Form Demo">
+        <div class="slds-var-m-around_medium">
+<!--Create a lightning-record-form-->
+<!-- mode = edit, view, read only-->
+<!-- Layout-type= full and compact(if we give full no need to give fields) ex: layout-type="Full", layout-type="Compact"-->
+<!-- if we want to do any modification in Full lay out we do in page layout-->
+<!--onsuccess is a default attribute for lightning-record-form - using this we can create a toast message.-->
+<lightning-record-form
+object-api-name={objectApiName}
+record-id={recordId}
+fields={fields}
+layout-type="Compact"
+columns="2"
+onsuccess={handleSuccess}>
+</lightning-record-form>
+
+  </div>
+    </lightning-card>
+</template>

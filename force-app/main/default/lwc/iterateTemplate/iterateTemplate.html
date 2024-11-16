@@ -1,0 +1,34 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 09-30-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Employee Details">
+        <div class="slds-p-around_medium">
+            <template iterator:it={employees}>
+                <div key={it.value.Id}>
+                    
+                <!--if the item is the 1st item-->
+                <!--lwc:if={iteratorname.first} returns a boolean value-->
+                <template lwc:if={it.first}>
+                    <!--<div class="slds-box slds-theme_shade slds-theme_alert-texture">-->
+                        <div class="emp_first">
+                        <strong>Top 5 Employees</strong>
+                    </div>
+                </template>
+                <!--{iteratorName}.value.{name}-->
+                {it.value.Name}
+                <template lwc:if={it.last}>
+                    <div class="emp_last">
+                    <a href="www.ajskilldevelopment.com">©️ www.ajskilldevelopment.com</a>
+                </div>
+            </template>
+                
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

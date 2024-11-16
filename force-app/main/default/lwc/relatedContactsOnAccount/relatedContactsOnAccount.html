@@ -1,0 +1,29 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 10-08-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Related Contacts">
+        <div class="slds-var-m-around_medium  slds-box">
+            <template lwc:if={account}>
+                    <template lwc:if={account.Contacts}>
+                        <template for:each={account.Contacts} for:item="contact">
+                            <div key={contact.Id}>
+                                {contact.LastName}
+                            </div>
+                        </template>
+                    </template>
+                    <template lwc:else>
+                        <p>No contacts found for this account.</p>
+                    </template>
+                
+            </template>
+            <template lwc:else>
+                <p>No account information available.</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

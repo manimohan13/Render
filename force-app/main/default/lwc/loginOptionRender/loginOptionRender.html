@@ -1,0 +1,46 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 10-03-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Login Options">
+        <div class="slds-p-around_medium slds-box" style="margin:10px;">
+            <lightning-input type="checkbox" class="membersLogin"  label="Members Login" 
+                onchange={handleMembersLoginChange}></lightning-input>
+            <lightning-input type="checkbox" class="newMemberSignin"   label="New Members Sign In" 
+                onchange={handleNewMembersSigninChange}></lightning-input>
+        </div>
+        
+        <!-- Render login credentials if 'Members Login' is selected -->
+       <template lwc:if={isMembersLoginChosen}>
+            <lightning-card title="Login Credentials">
+                <div class="slds-p-around_medium slds-box" style="margin:10px;">
+                    <lightning-input type="text" label="Username"></lightning-input>
+                    <lightning-input type="password" label="Password" onchange={handlePasswordChange}></lightning-input>
+                    <lightning-button label="Login" onclick={handleLogin}></lightning-button>
+                    <template lwc:if={showInvalidPasswordMessage}>
+                        <p style="color:red;">Invalid Password attempt</p>
+                    </template>
+                </div>
+            </lightning-card>
+        </template>
+
+        <!-- Render New Member Sign In template if selected -->
+        <template lwc:elseif={isNewMemberSigninChosen}>
+            <lightning-card title="New Member Sign In">
+                <div class="slds-p-around_medium slds-box" style="margin:10px;">
+                    <lightning-input type="text" label="Name" onchange={handleNameChange}></lightning-input>
+                    <lightning-input type="email" label="Email" onchange={handleEmailChange}></lightning-input>
+                    <lightning-button label="Register" onclick={handleRegistration}></lightning-button>
+                </div>
+            </lightning-card>
+        </template>
+                    <template lwc:if={showIncompleteRegistrationMessage}>
+                        <p style="color:red;">Please enter both Username and Email for successful Registration</p>
+                    </template>
+                
+    </lightning-card>
+</template>

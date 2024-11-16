@@ -1,0 +1,19 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 10-05-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Parent UnmountPhase">
+        <div class="slds-m-around_medium">
+          <lightning-button label="show Child" variant="Variant" onclick={handleShowClick}></lightning-button>
+
+          <template lwc:if={showChild}>
+            <c-child-unmount-phase onclose={handleClose}></c-child-unmount-phase>
+          </template>
+            
+        </div>
+    </lightning-card>
+</template>

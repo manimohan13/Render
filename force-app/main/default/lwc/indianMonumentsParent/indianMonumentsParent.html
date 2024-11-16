@@ -1,0 +1,26 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 10-04-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Child Parent Communication">
+        <div class="slds-m-around-medium slds-box" style="padding:50px;" >
+            <lightning-button label="Indian Monuments" variant="Success" onclick={HandleChange} style="text-align: center;"></lightning-button>
+        </div>
+
+       
+            <template for:each={selectedMonuments} for:item="name">
+                <div key={selectedMonumentsId}>
+                    {name}
+                </div>
+            </template>
+       
+        <template lwc:if={showbutton}>
+            <c-indian-monuments-child onclose={handleCloseChild}></c-indian-monuments-child>
+        </template>
+
+    </lightning-card>
+</template>

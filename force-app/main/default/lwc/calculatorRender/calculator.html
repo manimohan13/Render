@@ -1,0 +1,36 @@
+<!-- calculator.html -->
+<template>
+    <div style="background-color:lightgrey; width:300px; padding:10px; border-radius:8px;">
+        <h2 style="color:red; text-align:center;">CALCULATOR</h2>
+        <div style="text-align:center; font-size: 24px; padding: 10px; background-color: white; margin-bottom: 10px;">
+            {result}
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); grid-gap: 10px;">
+            <lightning-button label="%" onclick={handleButtonClick}></lightning-button>
+            <lightning-button label="CE" onclick={handleClear}></lightning-button>
+            <lightning-button label="C" onclick={handleClear}></lightning-button>
+            <lightning-button label="<<" onclick={handleBackspace}></lightning-button>
+
+            <lightning-button label="7" onclick={handleButtonClick}></lightning-button>
+            <lightning-button label="8" onclick={handleButtonClick}></lightning-button>
+            <lightning-button label="9" onclick={handleButtonClick}></lightning-button>
+            <lightning-button label="/" onclick={handleButtonClick}></lightning-button>
+
+            <lightning-button label="4" onclick={handleButtonClick}></lightning-button>
+            <lightning-button label="5" onclick={handleButtonClick}></lightning-button>
+            <lightning-button label="6" onclick={handleButtonClick}></lightning-button>
+            <lightning-button label="*" onclick={handleButtonClick}></lightning-button>
+
+            <lightning-button label="1" onclick={handleButtonClick}></lightning-button>
+            <lightning-button label="2" onclick={handleButtonClick}></lightning-button>
+            <lightning-button label="3" onclick={handleButtonClick}></lightning-button>
+            <lightning-button label="-" onclick={handleButtonClick}></lightning-button>
+
+            <lightning-button label="^2" onclick={handleSquare}></lightning-button>
+            <lightning-button label="0" onclick={handleButtonClick}></lightning-button>
+            <lightning-button label="=" onclick={handleCalculate}></lightning-button>
+            <lightning-button label="+" onclick={handleButtonClick}></lightning-button>
+        </div>
+        <lightning-button label="CLOSE" variant="destructive" style="width:100%; margin-top:10px;" onclick={handleClose}></lightning-button>
+    </div>
+</template>

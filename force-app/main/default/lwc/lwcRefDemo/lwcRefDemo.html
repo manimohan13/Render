@@ -1,0 +1,36 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 10-01-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+   <lightning-card title="LWC:Ref Demo">
+    <div class="slds-var-m-around_medium">
+        <lightning-input label="Name" onchange={handleNameChange}></lightning-input>
+        <lightning-input lwc:ref="refAgeInput" label="Age" type="number" onchange={handleAgeChange}></lightning-input>
+        <div class="slds-m-around_medium slds-align_absolute-center">
+            <lightning-button label="check Eligiblity" onclick={handleEligibleClick}></lightning-button>
+               </div>
+
+               <div class="slds-m-around_medium slds-align_absolute-center">
+                <lightning-button lwc:ref="refJoinBut" label="JOIN DRIVING SCHOOL" disabled=true onclick={handleJoinClick}></lightning-button>
+                   </div>
+
+               <div lwc:ref="refEligible">
+                <!--ELIGIBLE FOR DRIVING-->
+               </div>
+               <p class="refTagp1"> 
+                  HII from Tag1
+               </p>
+               <p class="refTagp1">
+                  HII from Tag2
+               </p>
+               <p class="refTagp1">
+                  HII from Tag3
+               </p>
+    </div>
+    </div>
+   </lightning-card> 
+</template>

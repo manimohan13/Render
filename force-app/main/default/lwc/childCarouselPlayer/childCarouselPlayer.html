@@ -1,0 +1,36 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 10-04-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-carousel>
+        <template for:each={cssPlayers} for:item="player">
+            <lightning-carousel-image
+                key={player.name}
+                src={player.imgSrc}
+                header={player.name}
+                description={player.about}
+                alternative-text="Player Image"
+                href="javascript:void(0);">
+            </lightning-carousel-image>
+        </template>
+    </lightning-carousel>
+
+    <lightning-carousel>
+        <template for:each={mumbaiIndiansPlayers} for:item="player">
+            <lightning-carousel-image
+                key={player.name}
+                src={player.imgSrc}
+                header={player.name}
+                description={player.about}
+                alternative-text="Player Image"
+                href="javascript:void(0);">
+            </lightning-carousel-image>
+        </template>
+    </lightning-carousel>
+</template>
+
+    

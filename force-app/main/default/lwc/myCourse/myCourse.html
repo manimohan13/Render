@@ -1,0 +1,26 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 09-28-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="My Course Details">
+    <div class="slds-p-around_medium">
+        <!--Data Binding-->
+        <div>Firs tName : {firstName}</div>  
+      <div>Last Name : {lastname}</div> 
+      <div>Full Name : {fullName}</div>
+      <div>Is Apex Chosen : {ApexChosen}</div>
+    <div>No of Courses Chosen : {noOfCoursesChosen}</div>
+       <div> days : {days} </div> 
+       <div>No of Weeks:{noOfWeaks}</div>
+        <div>Session : {QASLOT. Session}</div>
+        <div>{isSlotAvailable}</div>
+    </div>
+    <div class="slds-p-around_medium">
+    <lightning-input type="text" label="Enter FirstName" onchange={handleChange}></lightning-input>
+    </div>
+    </lightning-card>
+</template>

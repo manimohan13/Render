@@ -1,0 +1,19 @@
+<!-- insertReceipt.html -->
+<template>
+    <lightning-card title="Insert Receipt">
+        <div class="slds-var-m-around_medium">
+            <lightning-button 
+                class="slds-m-around_medium" 
+                label="Create Receipt" 
+                variant="brand" 
+                onclick={handleCreateClick}>
+            </lightning-button>
+        </div>
+        <template if:true={showButton}>
+            <c-child-insert-receipt 
+                contact-id={contactId} 
+                onclose={handleCloseChild}>
+            </c-child-insert-receipt>
+        </template>
+    </lightning-card>
+</template>

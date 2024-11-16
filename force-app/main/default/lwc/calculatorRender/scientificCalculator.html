@@ -1,0 +1,44 @@
+<template>
+    <div style="background-color:lightgreen; width:300px; padding:10px; border-radius:8px;">
+        <h2 style="color:red; text-align:center;">SCIENTIFIC CALCULATOR</h2>
+        <div style="text-align:center; font-size: 24px; padding: 10px; background-color: white; margin-bottom: 10px;">
+            {result}
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); grid-gap: 10px;">
+            <!-- Scientific operation buttons -->
+            <lightning-button label="cos" onclick={handleCos}></lightning-button>
+            <lightning-button label="%" onclick={handleButtonClick}></lightning-button>
+            <lightning-button label="CE" onclick={handleClear}></lightning-button>
+            <lightning-button label="C" onclick={handleClear}></lightning-button>
+
+            <lightning-button label="tan" onclick={handleTan}></lightning-button>
+            <lightning-button label="7" onclick={handleButtonClick}></lightning-button>
+            <lightning-button label="8" onclick={handleButtonClick}></lightning-button>
+            <lightning-button label="9" onclick={handleButtonClick}></lightning-button>
+
+            <lightning-button label="log" onclick={handleLog}></lightning-button>
+            <lightning-button label="4" onclick={handleButtonClick}></lightning-button>
+            <lightning-button label="5" onclick={handleButtonClick}></lightning-button>
+            <lightning-button label="6" onclick={handleButtonClick}></lightning-button>
+
+            <lightning-button label="sin" onclick={handleSin}></lightning-button>
+            <lightning-button label="1" onclick={handleButtonClick}></lightning-button>
+            <lightning-button label="2" onclick={handleButtonClick}></lightning-button>
+            <lightning-button label="3" onclick={handleButtonClick}></lightning-button>
+
+            <lightning-button label="cbrt" onclick={handleCbrt}></lightning-button>
+            <lightning-button label="sqrt" onclick={handleSqrt}></lightning-button>
+            <lightning-button label="0" onclick={handleButtonClick}></lightning-button>
+            <lightning-button label="=" onclick={handleCalculate}></lightning-button>
+
+            <!-- Basic arithmetic operation buttons -->
+            <lightning-button label="+" onclick={handleButtonClick}></lightning-button>
+            <lightning-button label="-" onclick={handleButtonClick}></lightning-button>
+            <lightning-button label="*" onclick={handleButtonClick}></lightning-button>
+            <lightning-button label="/" onclick={handleButtonClick}></lightning-button>
+        </div>
+        <div>
+            <lightning-button label="CLOSE" variant="destructive" style="width:100%; margin-top:10px;" onclick={handleClose}></lightning-button>
+        </div>
+    </div>
+</template>

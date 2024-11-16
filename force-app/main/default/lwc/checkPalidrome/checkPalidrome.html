@@ -1,0 +1,28 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 09-27-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Check Palindrome">
+        <div class="slds-p-around_medium ">
+            <lightning-input 
+                type="text" 
+                label="Enter Text" 
+                data-id="inputBox"
+            ></lightning-input>
+
+            <div class="slds-m-top_medium">
+            <lightning-button label="check Polindrome" title="Non-primary action" onclick={handleClick}></lightning-button>
+</div>
+            <!-- Display the result message with dynamic styling -->
+            <div class={computedClass} style="margin-top: 15px;">
+                {resultMessage}
+            </div>
+        </div>
+    </lightning-card>
+</template>
+
+

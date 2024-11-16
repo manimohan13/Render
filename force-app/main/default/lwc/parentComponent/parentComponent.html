@@ -1,0 +1,34 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 10-03-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Parent Component">
+    <div class="slds-m-around_medium">
+        <p>This is Parent Component</p>
+        <!-- kebab-case childComponent-->
+        <!--<c-child-component message="Hi Child !!! Im Your Parent"></c-child-component>-->
+          <!-- Attributes Names inside the Child component Should Be a kebab-case -->
+           <!--<c-child-component message-details={datatoChild}></c-child-component>-->
+           <!--<c-child-component message-details={courses}></c-child-component>-->
+           <c-child-component message-details={car}></c-child-component>
+        <!--
+         <c-child-component></c-child-component>
+         <lightning-tabset>
+            <lightning-tab label="Conditional render">
+         <c-conditional-rendering></c-conditional-rendering>
+       
+            </lightning-tab>
+            <lightning-tab label="Template iterate" title="2nd tab extended title">
+                <c-iterate-temp-diy></c-iterate-temp-diy>
+            </lightning-tab>
+            <lightning-tab label="To Do List">
+                <c-to-do-demo></c-to-do-demo>
+            </lightning-tab>
+        </lightning-tabset> -->
+        </div>
+    </lightning-card>
+</template>

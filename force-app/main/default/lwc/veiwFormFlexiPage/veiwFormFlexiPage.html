@@ -1,0 +1,45 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 10-07-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 10-07-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+
+    <lightning-card title="Record View Form FlexiPage">
+        <div class="slds-var-m-around_medium">
+            <!--Create a lightning-record-view-form-->
+            <lightning-record-view-form
+            object-api-name={objectApiName}
+            record-id={recordId}>
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_4-of-12">
+                <lightning-output-field field-name={name}></lightning-output-field>
+                <lightning-output-field field-name={amount}></lightning-output-field>
+                
+            </div>
+            <div class="slds-col slds-size_4-of-12">
+            <lightning-output-field field-name={expectedRevenue}></lightning-output-field>
+            <lightning-output-field field-name={stageName}></lightning-output-field>
+            </div>
+            <div class="slds-col slds-size_4-of-12">
+                <lightning-output-field field-name={closeDate}></lightning-output-field>
+            </div>
+            </div>
+
+
+            
+        </lightning-record-view-form>
+
+  </div>
+    </lightning-card>
+
+</template>

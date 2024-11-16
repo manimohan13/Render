@@ -1,0 +1,23 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 10-06-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card>
+        <div class="slds-var-m-around_medium slds-box" style="background-color: #fce5cd;">
+            <!-- Form Container -->
+             <h1 style = "font-size: 20px; font-weight:bold; margin-bottom:10px;"> Quiz APP </h1>
+            <div style="background-color: #ead1dc; border:1px solid black; border-radius: 20px; padding: 20px;">
+                <lightning-input label="Name" type="text"></lightning-input>
+                <lightning-input label="Email" type="email"></lightning-input>
+            </div>
+            <!-- Button -->
+            <div style="text-align: center; margin-top: 20px;">
+                <lightning-button label="Start Quiz" variant="success" onclick={handleStartQuiz}></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,15 @@
+
+/*Pseudo class - Use this host for give design for  whole component*/
+:host{
+font-weight: bold;
+text-align: center;
+}
+.noTask{
+    background-color:cornsilk;
+    color:red;
+    padding:20px;
+}
+.whenTask{
+    background-color: azure;
+    color:blue;
+}

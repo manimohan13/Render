@@ -1,0 +1,19 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 10-05-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Parent Component">
+        <div class="slds-m-around_medium">
+           <p lwc:ref="pTag">
+            Hello
+           </p>
+            {value}
+            <lightning-input type="text" label="Enter some text" onchange={handleChange}></lightning-input>
+           <c-child-mount-phase></c-child-mount-phase> 
+        </div>
+    </lightning-card>
+</template>
